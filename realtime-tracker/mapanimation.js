@@ -48,8 +48,8 @@ function move() {
       .then(function(location) {
         map.flyTo({center:location});
         marker.setLngLat(location);
-        popup.setLngLat(location);
-        popup.setHTML(location);
+        // popup.setLngLat(location);
+        // popup.setHTML(location);
         move();
       }
   ).catch(err => console.error(err));
