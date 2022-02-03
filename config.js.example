@@ -1,0 +1,3 @@
+var config = {
+    MAPBOX_KEY : 'ADD-YOUR-MAPBOX-ACCESS-TOKEN-HERE'
+  }
