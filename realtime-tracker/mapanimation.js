@@ -5,7 +5,9 @@ var location;
 var marker;
 var map;
 var popup;
-fetch(issApi)
+fetch(issApi, {
+  headers: { Origin: window.location.host }
+})
     .then(res => res.json())
     .then(data => [parseFloat(data.iss_position.longitude, 10), parseFloat(data.iss_position.latitude, 10)])
     .then(function(location) {
@@ -48,8 +50,8 @@ function move() {
       .then(function(location) {
         map.flyTo({center:location});
         marker.setLngLat(location);
-        // popup.setLngLat(location);
-        // popup.setHTML(location);
+        popup.setLngLat(location);
+        popup.setHTML(location);
         move();
       }
   ).catch(err => console.error(err));
