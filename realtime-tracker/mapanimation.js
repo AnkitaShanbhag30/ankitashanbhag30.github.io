@@ -1,4 +1,4 @@
-const issApi = 'http://api.open-notify.org/iss-now.json';
+const issApi = 'https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json';
 var mapbox_key = config.MAPBOX_KEY;
 mapboxgl.accessToken = mapbox_key;
 var location;
